@@ -1,0 +1,227 @@
+:root {
+  --primary-color: #0f356b;
+  --secondary-color: #f4b400;
+  --dark-bg: #021b34;
+  --light-bg: #f5f8fc;
+  --text-color: #333333;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  line-height: 1.6;
+  background-color: var(--light-bg);
+  color: var(--text-color);
+}
+
+header {
+  background: white;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  letter-spacing: 1px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--primary-color);
+}
+
+.hero {
+  background-image: url('images/hero-bg.png');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 6rem 1rem;
+}
+
+.hero.about-bg {
+  background-image: url('images/about-bg.png');
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero .btn {
+  display: inline-block;
+  background: var(--secondary-color);
+  color: var(--dark-bg);
+  padding: 0.75rem 2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background 0.3s;
+}
+
+.hero .btn:hover {
+  background: #f6c63c;
+}
+
+.section {
+  padding: 4rem 1rem;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+  font-size: 2rem;
+}
+
+.section p {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1.5rem;
+}
+
+.services, .lawyers, .contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.service, .lawyer, .contact-box {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 2rem;
+  flex: 1 1 280px;
+  max-width: 300px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service:hover, .lawyer:hover, .contact-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.service i, .lawyer i {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.service h3, .lawyer h4 {
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.service p, .lawyer p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.contact {
+  padding: 4rem 1rem;
+}
+
+.contact-container {
+  align-items: flex-start;
+}
+
+.contact-box form label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+.contact-box form input,
+.contact-box form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+.contact-box form textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.contact-box form button {
+  background: var(--primary-color);
+  color: white;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.contact-box form button:hover {
+  background: #0d2d5a;
+}
+
+footer {
+  background: var(--dark-bg);
+  color: white;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+footer a {
+  color: var(--secondary-color);
+  margin: 0 0.5rem;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .service, .lawyer, .contact-box {
+    max-width: 100%;
+  }
+}
