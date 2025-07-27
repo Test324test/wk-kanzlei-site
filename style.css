@@ -65,8 +65,18 @@ nav a:hover {
   padding: 6rem 1rem;
 }
 
+/*
+ * Use a darker text color on sections with light background images.
+ * The default hero style uses white text because the
+ * hero background (hero-bg.png) is dark. However, our
+ * about page uses a light blue gradient as the hero background. White
+ * text has poor contrast on light backgrounds, so override the
+ * text color for that specific hero instance. Reuse the primary
+ * color defined in the CSS variables for consistency.
+ */
 .hero.about-bg {
   background-image: url('images/about-bg.png');
+  color: var(--primary-color);
 }
 
 .hero h1 {
@@ -142,6 +152,19 @@ nav a:hover {
 .service i, .lawyer i {
   font-size: 2.5rem;
   color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+/*
+ * Portrait images in the lawyers section.
+ * Images are displayed at full width of their container, maintain aspect
+ * ratio and have rounded corners for a polished look. A margin below
+ * separates the image from the lawyer's name.
+ */
+.lawyer img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
   margin-bottom: 1rem;
 }
 
