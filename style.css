@@ -56,11 +56,22 @@ nav a:hover {
   color: var(--primary-color);
 }
 
+/*
+ * Hero section styling
+ *
+ * The hero section uses a background image and overlay text.  By default the
+ * template expected images to live in an `images/` subfolder, but on GitHub
+ * Pages the assets live in the project root.  Use root‑relative paths to
+ * reference the images.  We also use the primary colour for all hero text
+ * instead of white so it remains legible on lighter backgrounds.
+ */
 .hero {
-  background-image: url('images/hero-bg.png');
+  background-image: url('hero-bg.png');
   background-size: cover;
   background-position: center;
-  color: white;
+  /* Change the default hero text colour from white to the primary colour.
+     This improves contrast on both light and dark backgrounds. */
+  color: var(--primary-color);
   text-align: center;
   padding: 6rem 1rem;
 }
@@ -74,8 +85,15 @@ nav a:hover {
  * text color for that specific hero instance. Reuse the primary
  * color defined in the CSS variables for consistency.
  */
+/*
+ * About page hero
+ *
+ * The about page uses a light gradient background.  Use a root‑relative
+ * reference to the image and ensure the text colour matches the primary
+ * colour for readability.
+ */
 .hero.about-bg {
-  background-image: url('images/about-bg.png');
+  background-image: url('about-bg.png');
   color: var(--primary-color);
 }
 
